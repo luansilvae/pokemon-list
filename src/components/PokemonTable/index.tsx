@@ -18,6 +18,7 @@ const PokemonTable: React.FC<TableProps> = ({ rows }) => {
       renderCell: (params) => <img src={params.value} />,
     },
   ];
+  
   return (
     <Container maxWidth="lg">
       <div style={{ height: 600, marginTop: "50px" }}>
@@ -34,7 +35,7 @@ const PokemonTable: React.FC<TableProps> = ({ rows }) => {
             },
             "& .MuiDataGrid-footerContainer": {
               textTransform: "lowercase",
-            }
+            },
           }}
         />
       </div>
