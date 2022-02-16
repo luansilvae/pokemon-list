@@ -12,3 +12,6 @@ Faça o clone/download deste repositório, execute `npm install` / `yarn` para i
 - [Typescript](https://www.typescriptlang.org/) 
 - [Axios](https://axios-http.com/docs/intro)
 - [Material UI](https://mui.com/pt/)
+
+
+### Link para visualização 👉 [https://list-pokemon.vercel.app/](https://list-pokemon.vercel.app/)
