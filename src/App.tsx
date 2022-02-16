@@ -1,11 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Container } from "@mui/material";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import { IPokemon } from "./types/IPokemon";
+import Navbar from "./components/Navbar";
+
 import PokemonTable from "./components/PokemonTable";
+import { IPokemon } from "./types/IPokemon";
 
 function App() {
   const [pokemons, setPokemons] = useState<IPokemon[]>([]);
@@ -40,21 +38,7 @@ function App() {
 
   return (
     <main>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Container maxWidth="lg">
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                padding: "10px",
-              }}
-            >
-              <Button color="inherit">Pokedex</Button>
-            </Box>
-          </Container>
-        </AppBar>
-      </Box>
+      <Navbar />
       <PokemonTable rows={pokemons} />
     </main>
   );
