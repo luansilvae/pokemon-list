@@ -1,6 +1,8 @@
 import React from "react";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
-import { Container } from "@mui/material";
+import { Button, Container } from "@mui/material";
+import { Link } from "react-router-dom";
+
 import { IPokemon } from "../../types/IPokemon";
 
 interface TableProps {
@@ -17,8 +19,23 @@ const PokemonTable: React.FC<TableProps> = ({ rows }) => {
       width: 130,
       renderCell: (params) => <img src={params.value} />,
     },
+    {
+      field: "details",
+      headerName: "Detalhes",
+      width: 130,
+      renderCell: (params) => (
+        <Link
+          to={`/pokemon/${params.id}`}
+          style={{ textTransform: "capitalize", textDecoration: "none" }}
+        >
+          <Button variant="contained" size="small" color="primary">
+            Ver detalhes
+          </Button>
+        </Link>
+      ),
+    },
   ];
-  
+
   return (
     <Container maxWidth="lg">
       <div style={{ height: 600, marginTop: "50px" }}>

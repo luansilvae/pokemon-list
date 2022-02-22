@@ -3,6 +3,7 @@ import { Container } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   return (
@@ -16,7 +17,9 @@ const Navbar: React.FC = () => {
               padding: "10px",
             }}
           >
-            <Button color="inherit">Pokedex</Button>
+            <Link to="/" style={{ color: '#fff', textDecoration: 'none' }}>
+              <Button color="inherit">Pokedex</Button>
+            </Link>
           </Box>
         </Container>
       </AppBar>

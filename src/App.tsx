@@ -1,15 +1,18 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import PokemonTable from "./components/PokemonTable";
-import { usePokemon } from "./hooks/usePokemon";
+
+import Main from "./Pages/Main";
+import Pokemon from "./Pages/Pokemon";
 
 function App() {
-  const pokemons = usePokemon()
-
   return (
-    <main>
+    <BrowserRouter>
       <Navbar />
-      <PokemonTable rows={pokemons} />
-    </main>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/pokemon/:pokemonId" element={<Pokemon />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
