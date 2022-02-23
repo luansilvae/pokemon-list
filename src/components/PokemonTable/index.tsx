@@ -11,7 +11,14 @@ interface TableProps {
 
 const PokemonTable: React.FC<TableProps> = ({ rows }) => {
   const columns: GridColDef[] = [
-    { field: "id", headerName: "ID", width: 80 },
+    {
+      field: "id",
+      headerName: "Nº",
+      width: 80,
+      renderCell: (params) => (
+        <strong>#{String(params.id).padStart(3, "0")}</strong>
+      ),
+    },
     { field: "name", headerName: "Nome", width: 130 },
     {
       field: "sprite",
@@ -37,8 +44,8 @@ const PokemonTable: React.FC<TableProps> = ({ rows }) => {
   ];
 
   return (
-    <Container maxWidth="lg">
-      <div style={{ height: 600, marginTop: "50px" }}>
+    <Container maxWidth="lg" sx={{ display: "flex", justifyContent: "center", alignItems: 'center'}}>
+      <div style={{ height: "600px", marginTop: "50px", width: '700px'}}>
         <DataGrid
           rows={rows}
           columns={columns}

@@ -65,7 +65,7 @@ export function Pokemon() {
                   paragraph
                   sx={{ ml: 2 }}
                 >
-                  Nº {pokemonData.id}
+                  Nº {String(pokemonData.id).padStart(3, '0')}
                 </Typography>
               </Typography>
             </Container>
