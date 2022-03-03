@@ -34,7 +34,6 @@ export function Pokemon() {
       .get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
       .then((response) => {
         setPokemonData(response.data);
-        console.log(response.data);
       });
   }, []);
 
