@@ -166,7 +166,7 @@ export function Pokemon() {
                     gap: "10px",
                   }}
                 >
-                  Tipo
+                  Type
                   <Box
                     sx={{
                       display: "flex",
